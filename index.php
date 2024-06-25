@@ -24,6 +24,8 @@
         guardai in alto e vidi le sue spalle
         vestite già de' raggi del pianeta
         che mena dritto altrui per ogne calle.";
+
+        $paragrafo = str_replace($_GET["censured"], "***", $paragrafo);
 ?>
 
 <!DOCTYPE html>
@@ -41,11 +43,24 @@
             ?>
         
         </h1>
+        
+        <p>
+            <strong>
+            La lunghezza delle righe è di: <?php echo strlen($paragrafo);?>
+            </strong>
+        </p>
+
         <p>
             <?php
                 echo $paragrafo;
             ?>
         </p>
+
     </main>
+
+    <form action="./index.php" method="GET">
+        <input type="text" name="censured" id="censured">
+        <button type="submit">INVIA</button>
+    </form>
 </body>
 </html>
