@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Badwords</title>
-</head>
-<body>
-    <main>
-        <h1>
-            Commedia di Dante: Canto I
-        </h1>
-        <p>
-        Nel mezzo del cammin di nostra vita
+<?php
+    $titolo = "Commedia di Dante: Canto I";
+
+    $paragrafo = "Nel mezzo del cammin di nostra vita
         mi ritrovai per una selva oscura,
         ché la diritta via era smarrita.
 
@@ -33,7 +23,28 @@
 
         guardai in alto e vidi le sue spalle
         vestite già de' raggi del pianeta
-        che mena dritto altrui per ogne calle.
+        che mena dritto altrui per ogne calle.";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Badwords</title>
+</head>
+<body>
+    <main>
+        <h1>
+            <?php
+                echo $titolo;
+            ?>
+        
+        </h1>
+        <p>
+            <?php
+                echo $paragrafo;
+            ?>
         </p>
     </main>
 </body>
